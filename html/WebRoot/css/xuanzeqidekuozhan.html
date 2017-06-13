@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		/* 
+			* CSS的选择器
+				* 扩展选择器
+					* 关联选择器：标签可以嵌套，标签与标签之间的关系。
+						* 写法：	中间用空格隔开	例子（div font{CSS的代码}）
+						
+					* 组合选择器：对多个不同的选择器进行相同的样式
+						* 写法：在多个不同的选择器之间用 ,	隔开
+						
+					* 伪元素选择器：	定义好的一些选择器，用就ok。
+						* 如果使用超链接伪元素选择器：使用顺序：	L V H A
+			*/
+		/* 
+			1	div font{
+				font-size: 25xp;
+				color: red;
+			} 
+			了解内容以下 * 伪元素选择器：
+			input:FOCUS {
+				background-color: pink;
+			}*/
+			/* 未访问 */
+			.abc:LINK {
+				text-decoration: none;
+				color: pink;
+			}
+			/* 访问完成 */
+			.abc:VISITED {
+				color: pink;
+				font-size: 20px;
+			}
+			/* 悬停 */
+			.abc:HOVER {
+				color: pink;
+				font-size: 25px;
+			}
+			/* 点击状态 */
+			.abc:ACTIVE {
+				color: pink;
+				font-size: 35px
+			}
+			
+			
+	</style>
+</head>
+<body>
+
+	<a class=" abc" href="http://www.baidu.com">哔哩哔哩</a>
+	<!-- (1)关联选择器  font就是div的子标签 -->
+	<div>这是div的区域<font>区域 1</font></div>
+	<!-- 这里也可以这样写代表这就个输入框并不提交内容 -->
+	<input type="text">
+</body>
+</html>
